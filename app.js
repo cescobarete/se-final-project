@@ -1,4 +1,5 @@
 // imports
+// Listening on port localhost:3000
 const express = require('express')
 const app = express()
 const port = 3000
@@ -12,6 +13,3 @@ app.use('/img', express.static(__dirname + 'public/img'))
 app.get('', (req, res) => {
     res.sendFile(__dirname + '/views/index.html')
 })
-
-// Listeen on port 3000
-app.listen(port, () => console.info('Listening on port ${port}'))
