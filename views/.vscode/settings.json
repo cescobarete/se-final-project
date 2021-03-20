@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/9a957856-6565-4555-86ea-832b0bcd100e/resourceGroups/appsvc_windows_centralus4/providers/Microsoft.Web/sites/final-project-cnys",
+    "appService.deploySubpath": "."
+}
