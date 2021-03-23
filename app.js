@@ -1,17 +1,13 @@
 // imports
-// Listening on port localhost:3000
 const express = require('express')
 const app = express()
 const port = 3000
 
 // static Files
-app.use(express.static('public'))
-app.use('/css', express.static(__dirname + 'public/css'))
-app.use('/js', express.static(__dirname + 'public/js'))
-app.use('/img', express.static(__dirname + 'public/img'))
+app.use(express.static('./public'))
+//app.use('/js',express.static(__dirname + '/js'))
+//app.use('/css',express.static(__dirname + '/css'))
+//app.use('/img',express.static(__dirname + '/img'))
 
-app.get('', (req, res) => {
-    res.sendFile(__dirname + '/views/index.html')
-})
-
-app.listen(port, () => console.info('Listening on port 3000'))
+// Listeen on port 3000
+app.listen(port, () => console.info('Listening on port ${port}'))
