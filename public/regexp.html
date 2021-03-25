@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Phrase Tester</title>
+        <!--Allows css and html to be in same file-->
+        <style type="text/css">
+            body {
+                text-align: center;
+                background-color: tomato
+            }
+        </style>
+        <!--Allow javascript to be in the same file as html-->
+        <script type="text/javascript">
+        //Functioon testing input 1 and 2 to see if fields match
+        function myFunc() {
+            var field1 = document.getElementById("input1").value;
+            var field2 = document.getElementById("input2").value;
+            //matches the whole text or letter to see if matches
+            var found = field1.match(field2);
+            if (found) {
+                alert("Inputs match");
+            } else {
+                alert("Not a match");
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <!--Input fields, will start off with test and test2 in the inout box-->
+        <input type="text" id="input1" value="test" />
+        <input type="text" id="input2" value="test2" />
+        <!--Button that calls and tests the button for the two inputs-->
+        <input type="button" value="Test" 
+        onclick="myFunc()" />
+    </body>
+</html>

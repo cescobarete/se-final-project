@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Author:  Christian Escobarete
+    Class:   Software Engineering
+    Description: Christians dice game
+-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Dice Game</title>
+        <link rel="stylesheet" href="mycss.css">
+        <script src="myjs.js"></script>
+    </head>
+    <!--allows dice to be ran upon opening-->
+    <body onload="myFunc()">
+        <h1>YAHTZEE</h1>
+        <style>
+            body { 
+                background-color: lightgrey;
+                text-align: center;
+            }
+
+            h1 {
+                background-color: black;
+                color: white;
+                text-shadow: 2px 2px blue;
+            }
+
+            h2 {
+                background-color: black;
+                color: white;
+                text-shadow: 2px 2px rgb(245, 38, 90);
+            }
+
+            h3 {
+                background-color: black;
+                color: white;
+                text-shadow: 2px 2px rgb(40, 231, 104);
+            }
+        </style>
+        <script>
+            function RollDie() {
+                document.getElementById("Dice").value = Math.floor(Math.random()*6) + 1;
+            }
+            //New function for each dice
+            function RollDie2() {
+                document.getElementById("Dice2").value = Math.floor(Math.random()*6) + 1;
+            }
+            function RollDie3() {
+                document.getElementById("Dice3").value = Math.floor(Math.random()*6) + 1;
+            }
+            function RollDie4() {
+                document.getElementById("Dice4").value = Math.floor(Math.random()*6) + 1;
+            }
+            function RollDie5() {
+                document.getElementById("Dice5").value = Math.floor(Math.random()*6) + 1;
+            }
+
+            //function rolls dice auto upon opening
+            function myFunc(){
+                RollDie()
+                RollDie2()
+                RollDie3()
+                RollDie4()
+                RollDie5()
+                alert("Dice rolled")
+            }    
+        </script>
+        <!--input for button slot-->
+        Roll: <input id="Dice" type="text" value="" size="5" disabled><br><br>
+        <!--Button for each dice roll-->
+        <button type="button" onclick="RollDie()">1st Roll</button><br><br>
+        Roll2: <input id="Dice2" type="text" value="" size="5" disabled><br><br>
+        <button type="button" onclick="RollDie2()">2nd Roll</button><br><br>
+        Roll3: <input id="Dice3" type="text" value="" size="5" disabled><br><br>
+        <button type="button" onclick="RollDie3()">3rd Roll</button><br><br>
+        Roll4: <input id="Dice4" type="text" value="" size="5" disabled><br><br>
+        <button type="button" onclick="RollDie4()">4th Roll</button><br><br>
+        Roll5: <input id="Dice5" type="text" value="" size="5" disabled><br><br>
+        <button type="button" onclick="RollDie5()">5th Roll</button><br><br>
+        <!--Allows the player to roll every dice at once-->
+        <button type="button" onclick="RollDie(),RollDie2(),RollDie3(),RollDie4(),RollDie5()" autofocus>Roll ALL</button><br><br>
+        <!--Rules towards yahtzee game-->
+        <h2>RULES</h2>
+        <p>YAHTZEE consists of a number of rounds(13 ROUNDS)<br>
+            A player can get up to THREE rolls with 5 die.<br>
+            OPTIONAL: You can chose to end your turn before your 3rd roll.<br>
+            The total score is calculated by summing all categories<br><br>
+                            UPPER section(categories)<br>
+            Aces: The sum of the dice with the number 1<br>
+            Twos: The sum of the dice with the number two<br>
+            Threes: The sum of the dice with the number three<br>
+            Fours: The sum of the dice with the number four<br>
+            Fives: The sum of the dice with the number five<br>
+            Sixes: The sum if the dice with the number six<br>
+            A bonus of 35 is added if 63 or more points are scored in the upper section<br><br>
+                            LOWER section<br>
+            Three of a kind: At least three dice the same, sum of dice(points)<br>
+            Four of a kind: At least four fice the same, sum of dice(points)<br>
+            Full House: Three of one number and two of another, 25 points<br>
+            Small straight: Four sequential dice ex: 1,2,3,4, 30 points<br>
+            Large straight: Five sequential dice ex: 1,2,3,4,5, 40 points<br>
+            YAHTZEE: All five dice the same ex: 1,1,1,1,1, 50 points<br>
+            Chance: Any combination, Sum of all dice</p> 
+            <h3>:)</h3>
+    </body>
+</html>
